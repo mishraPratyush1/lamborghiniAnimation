@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    background: url("background.jpg");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: sky alternate 1s infinite;
+}
+.birds img{
+    height: 48%;
+    width: 70%;
+    position: absolute;
+    top: -11%;
+    left: 20%;
+    animation: shakeBirds alternate 1s infinite;
+
+}
+.trees{
+    height: 100%;
+    width: 100%;
+    background: url("trees.png");
+    background-size: cover;
+    position: absolute;
+    top: -20%;
+}
+.track{
+    height: 30%;
+    width: 800%;
+    background: url("track.png") repeat-x;
+    position: absolute;
+    top: 70vh;
+    animation: carMove linear 13s infinite;
+}
+.car{
+    height: 100px;
+    width: 380px;
+    background: url("car_body.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 22.8vh;
+    left: 14%;
+    animation: shake linear .3s infinite;
+} 
+
+.wheel1 img{
+    width: 77px;
+    position: relative;
+    top: 42px;
+    left: 42px;
+    animation: rotate linear .2s infinite forwards;
+}
+.wheel2 img{
+    width: 77px;
+    position: relative;
+    top: -39px;
+    left: 235px;
+    animation: rotate linear .2s infinite backwards;
+}
+
+@keyframes rotate{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove{
+
+    100%{
+        transform: translateX(-500vw);
+    }
+    
+}
+@keyframes shake{
+
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+    
+}
+@keyframes sky{
+
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+    
+}
+@keyframes shakeBirds{
+
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+    
+}
